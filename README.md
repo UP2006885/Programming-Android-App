@@ -3,6 +3,12 @@ Repository for my Android app for M30235 PAPL
 
 ## Overview of Project
 
+This is a repository for storing and organising the development process files as well as implementation code for my programming project for M30235. This project consists of specifying a viable application using a decision map and then translating that application into a CSV for backend implementation using nodes to check the viability of this specification.  
+
+I have then taken that specification and created a high quality design document consisting of Figma (file format svgs?) that show the UX of the suggested project. I have then used android studio to implement the specification and design into a viable implementation of the required project.  
+
+I will then validate and validify the resulting project and determine if the project has acomplished the requirements, if not I will perform maintenance on the project to develop it to a more sufficient standard.
+
 ### Task 1 - Map and Specification of Project
 
 #### Decision Map
