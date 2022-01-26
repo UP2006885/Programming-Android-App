@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Console {
     Scanner input;
     public Console(NodeMap map){
-//        input = new Scanner(System.in);
+       input = new Scanner(System.in);
         while (map.currentNode() != null) {
             System.out.println(map.currentNode().getDescription());
             System.out.println(map.currentNode().getQuestion());

@@ -43,6 +43,7 @@ public class NodeCollection {
         }
         return new Node();
     }
+    public Node get(int index){ return nodes.get(index); }
 
     @Override
     public String toString(){

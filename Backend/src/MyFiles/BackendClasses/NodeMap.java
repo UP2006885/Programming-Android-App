@@ -1,14 +1,11 @@
 package MyFiles.BackendClasses;
 
+import java.io.FileNotFoundException;
+
 public class NodeMap {
     // Variables
     private Node head;
     private Node currentNode;
-    // Getters and Setters
-//    public Node getHead() {return head;}
-//    public void setHead(Node Head) {this.head = Head;}
-//    public Node getCurrentNode() {return currentNode;}
-//    public void setCurrentNode(Node currentNode) {this.currentNode = currentNode;}
 
     public Node currentNode() { return currentNode;}
     public void noDecision(){
@@ -21,6 +18,19 @@ public class NodeMap {
             case 2 -> currentNode = currentNode.getNoNode();
             case 3 -> currentNode = currentNode.getOptionalNode();
         }
+    }
+
+    public NodeMap()  {
+        NodeCollection nodeCollection;
+        try {
+            nodeCollection = new NodeCollection();
+            head = nodeCollection.get(0);
+        } catch (FileNotFoundException e) {
+            //message
+            return;
+        }
+        buildMap(nodeCollection);
+        currentNode = head;
     }
 
     private void buildMap(NodeCollection NodeCollection)   {
