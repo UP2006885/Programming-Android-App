@@ -25,6 +25,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void yesClickHandler(View view){
-
+        nodeMap.currentNode().getQuestion();
     }
 }
