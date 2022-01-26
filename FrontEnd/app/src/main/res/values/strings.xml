@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ObtainMilk</string>
     <string name="pre_description">You wake up</string>
-    <string name="pre_question">Do you sleep in?</string>
+    <string name="post_description">Why did you!</string>
 </resources>
