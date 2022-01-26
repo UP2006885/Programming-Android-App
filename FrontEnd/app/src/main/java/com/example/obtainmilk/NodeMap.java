@@ -14,10 +14,16 @@ public class NodeMap {
 
     // Switch statement for user input
     public void decision(int inputID) {
-        switch (inputID) {
-            case 1 -> currentNode = currentNode.getYesNode();
-            case 2 -> currentNode = currentNode.getNoNode();
-            case 3 -> currentNode = currentNode.getOptionalNode();
+        switch (inputID){
+            case 1:
+                currentNode = currentNode.getYesNode();
+                break;
+            case 2:
+                currentNode = currentNode.getNoNode();
+                break;
+            case 3:
+                currentNode = currentNode.getOptionalNode();
+                break;
         }
     }
 
