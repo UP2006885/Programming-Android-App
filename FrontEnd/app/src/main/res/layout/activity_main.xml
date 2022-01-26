@@ -27,16 +27,19 @@
             android:layout_height="wrap_content" android:id="@+id/button2"
             app:backgroundTint="#F5ED00" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/button"
-            app:layout_constraintVertical_bias="0.0" android:onClick="MaybeClickHandler"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="MaybeClickHandler"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginBottom="168dp"
+            app:layout_constraintTop_toBottomOf="@+id/button3" app:layout_constraintVertical_bias="0.0"/>
     <Button
             android:text="No"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button3"
             app:backgroundTint="#EF233C" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" app:layout_constraintVertical_bias="0.0"
-            android:onClick="noClickHandler"/>
+            android:onClick="noClickHandler" app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintVertical_bias="0.0"
+    />
     <TextView
             android:text="@string/pre_description"
             android:layout_width="wrap_content"

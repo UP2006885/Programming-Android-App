@@ -10,8 +10,6 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
     NodeMap nodeMap;
-    TextView tvDescription = (TextView) findViewById(R.id.TextDescription);
-    TextView tvQuestion = (TextView) findViewById(R.id.TextQuestion);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         InputStream in_s = getCSVRes();
         nodeMap = new NodeMap(in_s);
+
+        System.out.println(nodeMap.currentNode().getID());
+        System.out.println(nodeMap.currentNode().getDescription());
+        System.out.println(nodeMap.currentNode().getQuestion());
 
     }
     protected InputStream getCSVRes(){
@@ -29,23 +31,27 @@ public class MainActivity extends AppCompatActivity {
     // Buttons
     public void yesClickHandler(View view){
         nodeMap.decision(1);
-        // Updates Text.
-        tvDescription.setText(nodeMap.currentNode().getDescription());
-        tvQuestion.setText(nodeMap.currentNode().getQuestion());
+        System.out.println("Button1-Yes");
+        System.out.println(nodeMap.currentNode().getID());
+        System.out.println(nodeMap.currentNode().getDescription());
+        System.out.println(nodeMap.currentNode().getQuestion());
 
     }
 
     public void noClickHandler(View view){
         nodeMap.decision(2);
-        // Updates Text.
-        tvDescription.setText(nodeMap.currentNode().getDescription());
-        tvQuestion.setText(nodeMap.currentNode().getQuestion());
+        System.out.println("Button2-No");
+        System.out.println(nodeMap.currentNode().getID());
+        System.out.println(nodeMap.currentNode().getDescription());
+        System.out.println(nodeMap.currentNode().getQuestion());
+
     }
 
     public void MaybeClickHandler(View view){
         nodeMap.decision(3);
-        // Updates Text.
-        tvDescription.setText(nodeMap.currentNode().getDescription());
-        tvQuestion.setText(nodeMap.currentNode().getQuestion());
+        System.out.println("Button3-Maybe");
+        System.out.println(nodeMap.currentNode().getID());
+        System.out.println(nodeMap.currentNode().getDescription());
+        System.out.println(nodeMap.currentNode().getQuestion());
     }
 }
