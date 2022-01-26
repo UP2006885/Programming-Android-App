@@ -4,9 +4,6 @@ import MyFiles.BackendClasses.*;
 import java.io.FileNotFoundException;
 
 import static java.lang.Integer.valueOf;
-
-
-
 public class Main {
     static NodeCollection NodeCollection;
     public static void main(String[] args) {

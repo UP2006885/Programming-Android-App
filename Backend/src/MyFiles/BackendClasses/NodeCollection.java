@@ -32,6 +32,15 @@ public class NodeCollection {
         return n;
     }
 
+    public Node locateNodeBy(int nodeID) {
+        for (Node n : nodes) {
+            if (nodeID == n.getID()) {
+                return n;
+            }
+        }
+        return new Node();
+    }
+
     @Override
     public String toString(){
         String str = "";
