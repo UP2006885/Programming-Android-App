@@ -1,5 +1,6 @@
 package com.example.obtainmilk;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.Integer.valueOf;
@@ -12,9 +13,9 @@ public class NodeCollection {
     }
 
     // Uses CSV to map nodes.
-    public NodeCollection() throws FileNotFoundException {
-        java.io.File file = new java.io.File("src/MyFiles/myCSV.csv");
-        Scanner FileReference = new Scanner(file);
+    public NodeCollection(InputStream in_s) throws FileNotFoundException {
+
+        Scanner FileReference = new Scanner(in_s);
         nodes = new ArrayList<Node>();
         Node node;
         // While theres data in CSV this loop continues, and calls mapFields to store that data in nodes.

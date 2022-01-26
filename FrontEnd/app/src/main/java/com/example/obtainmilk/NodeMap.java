@@ -1,5 +1,6 @@
 package com.example.obtainmilk;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class NodeMap {
     // Variables
@@ -28,10 +29,10 @@ public class NodeMap {
     }
 
     // Building Map
-    public NodeMap()  {
+    public NodeMap(InputStream in_s)  {
         NodeCollection nodeCollection;
         try {
-            nodeCollection = new NodeCollection();
+            nodeCollection = new NodeCollection(in_s);
             head = nodeCollection.get(0);
         } catch (FileNotFoundException e) {
             //message
