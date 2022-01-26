@@ -1,5 +1,4 @@
 package MyFiles.BackendClasses;
-
 import java.io.FileNotFoundException;
 
 public class NodeMap {
@@ -7,11 +6,13 @@ public class NodeMap {
     private Node head;
     private Node currentNode;
 
+    // Getters/Setters
     public Node currentNode() { return currentNode;}
     public void noDecision(){
         currentNode = currentNode.getYesNode();
     }
 
+    // Switch statement for user input
     public void decision(int inputID) {
         switch (inputID) {
             case 1 -> currentNode = currentNode.getYesNode();
@@ -20,6 +21,7 @@ public class NodeMap {
         }
     }
 
+    // Building Map
     public NodeMap()  {
         NodeCollection nodeCollection;
         try {
@@ -32,7 +34,6 @@ public class NodeMap {
         buildMap(nodeCollection);
         currentNode = head;
     }
-
     private void buildMap(NodeCollection NodeCollection)   {
         if (NodeCollection == null) {return;}
         for(Node source : NodeCollection.arrayList()){

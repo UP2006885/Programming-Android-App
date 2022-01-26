@@ -5,16 +5,20 @@ import java.util.Scanner;
 import static java.lang.Integer.valueOf;
 
 public class NodeCollection {
+    // Array list for storing nodes.
     private ArrayList<Node> nodes;
     public ArrayList<Node> arrayList(){
         return nodes;
     }
 
+    // Uses CSV to map nodes.
     public NodeCollection() throws FileNotFoundException {
         java.io.File file = new java.io.File("src/MyFiles/myCSV.csv");
         Scanner FileReference = new Scanner(file);
         nodes = new ArrayList<Node>();
         Node node;
+        // While theres data in CSV this loop continues, and calls mapFields to store that data in nodes.
+        // These nodes are then inserted into an ArrayList.
         while (FileReference.hasNext()) {
             String line = FileReference.nextLine();
             node = mapFields(line);
@@ -23,6 +27,7 @@ public class NodeCollection {
         FileReference.close();
     }
 
+    // Uses CSV and stores the correct split data in nodes.
     Node mapFields(String line) {
         String[] stringArray = line.split(",");
         Node n = new Node();
@@ -35,6 +40,7 @@ public class NodeCollection {
         return n;
     }
 
+    // Checks Node ID.
     public Node locateNodeBy(int nodeID) {
         for (Node n : nodes) {
             if (nodeID == n.getID()) {
@@ -45,6 +51,7 @@ public class NodeCollection {
     }
     public Node get(int index){ return nodes.get(index); }
 
+    // to String method for outputting data.
     @Override
     public String toString(){
         String str = "";
@@ -53,8 +60,4 @@ public class NodeCollection {
         }
         return str;
     }
-
-
-
 }
-
