@@ -11,6 +11,12 @@ public class Node {
     private String description;
     private String question;
 
+    // Node Links.
+    private Node YesNode;
+    private Node NoNode;
+    private Node OptionalNode;
+
+
     // Constructor.
     public Node(int ID, int yesID, int noID, int optionalID, String description, String question) {
         this.ID = ID;
@@ -40,7 +46,12 @@ public class Node {
     public void setDescription(String description) {this.description = description;}
     public String getQuestion() {return question;}
     public void setQuestion(String question) {this.question = question;}
-    // ---
+
+    // Nodes
+    public Node getYesNode(){return YesNode;}
+    public void setYesNode(Node YesNode){this.YesNode = YesNode;}
+    public Node getNoNode(){return NoNode;}
+    public void setNoNode(Node NoNode){this.NoNode = NoNode;}
 
 
     // ToString Method.
