@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         InputStream in_s = getCSVRes();
         nodeMap = new NodeMap(in_s);
+        String question = nodeMap.currentNode().getQuestion();
+        String description = nodeMap.currentNode().getDescription();
+
     }
 
     protected InputStream getCSVRes(){
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // Buttons
     public void yesClickHandler(View view){
-        nodeMap.currentNode().getQuestion();
+//        nodeMap.currentNode().getQuestion();
     }
 
     public void noClickHandler(View view){
