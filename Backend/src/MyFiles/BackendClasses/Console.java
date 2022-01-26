@@ -3,20 +3,30 @@ package MyFiles.BackendClasses;
 import java.util.Scanner;
 
 public class Console {
-    Scanner io;
+    Scanner input;
     public Console(NodeMap map){
-        io = new Scanner(System.in);
+//        input = new Scanner(System.in);
         while (map.currentNode() != null) {
             System.out.println(map.currentNode().getDescription());
             System.out.println(map.currentNode().getQuestion());
             if (map.currentNode().getQuestion().equals("-")) {
-                pressEnterToContinue();
+                endOfSim();
                 map.noDecision();
             } else {
-                map.decision(
-                        fromConsoleGetInt("Yes or No? (press 1 for Yes or 2 No)")
-                ) ;
+                map.decision(getID("Yes or No? (press 1 for Yes or 2 No, 3 for maybe)"));
             }
         }
     }
+
+    public  void endOfSim(){
+        System.out.println("Press Enter key to continue...");
+        try { System.in.read();}
+        catch(Exception e) {}
+    }
+
+    public int getID(String prompt){
+        System.out.println(prompt);
+        return input.nextInt();
+    }
+
 }
