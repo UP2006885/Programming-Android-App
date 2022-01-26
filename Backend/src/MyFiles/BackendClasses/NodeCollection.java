@@ -6,6 +6,9 @@ import static java.lang.Integer.valueOf;
 
 public class NodeCollection {
     private ArrayList<Node> nodes;
+    public ArrayList<Node> arrayList(){
+        return nodes;
+    }
 
     public NodeCollection() throws FileNotFoundException {
         java.io.File file = new java.io.File("src/MyFiles/myCSV.csv");
