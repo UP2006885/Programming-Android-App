@@ -1,6 +1,7 @@
 package com.example.obtainmilk;
 
 import android.content.res.Resources;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -21,5 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected InputStream getCSVRes(){
         Resources res = getResources();
         return res.openRawResource(R.raw.mycsv);
+    }
+
+    public void yesClickHandler(View view){
+
     }
 }
