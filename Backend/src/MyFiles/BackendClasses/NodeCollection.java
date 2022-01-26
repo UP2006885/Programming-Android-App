@@ -8,7 +8,7 @@ public class NodeCollection {
     private ArrayList<Node> nodes;
 
     public NodeCollection() throws FileNotFoundException {
-        java.io.File file = new java.io.File("src/myCSV.csv");
+        java.io.File file = new java.io.File("src/MyFiles/myCSV.csv");
         Scanner FileReference = new Scanner(file);
         nodes = new ArrayList<Node>();
         Node node;
