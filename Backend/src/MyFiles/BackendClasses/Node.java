@@ -53,6 +53,9 @@ public class Node {
     public Node getNoNode(){return NoNode;}
     public void setNoNode(Node NoNode){this.NoNode = NoNode;}
 
+    public Node getOptionalNode(){return OptionalNode;}
+    public void setOptionalNode(Node OptionalNode){this.OptionalNode = OptionalNode;}
+
 
     // ToString Method.
     @Override
