@@ -32,26 +32,33 @@ public class MainActivity extends AppCompatActivity {
     public void yesClickHandler(View view){
         nodeMap.decision(1);
         System.out.println("Button1-Yes");
-        System.out.println(nodeMap.currentNode().getID());
-        System.out.println(nodeMap.currentNode().getDescription());
-        System.out.println(nodeMap.currentNode().getQuestion());
+        // ------
+        String description = nodeMap.currentNode().getDescription();
+        String question = nodeMap.currentNode().getQuestion();
+        ((TextView)findViewById(R.id.TextDescription)).setText(description);
+        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
+
 
     }
 
     public void noClickHandler(View view){
         nodeMap.decision(2);
         System.out.println("Button2-No");
-        System.out.println(nodeMap.currentNode().getID());
-        System.out.println(nodeMap.currentNode().getDescription());
-        System.out.println(nodeMap.currentNode().getQuestion());
+        // ------
+        String description = nodeMap.currentNode().getDescription();
+        String question = nodeMap.currentNode().getQuestion();
+        ((TextView)findViewById(R.id.TextDescription)).setText(description);
+        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
 
     }
 
     public void MaybeClickHandler(View view){
         nodeMap.decision(3);
         System.out.println("Button3-Maybe");
-        System.out.println(nodeMap.currentNode().getID());
-        System.out.println(nodeMap.currentNode().getDescription());
-        System.out.println(nodeMap.currentNode().getQuestion());
+        // ------
+        String description = nodeMap.currentNode().getDescription();
+        String question = nodeMap.currentNode().getQuestion();
+        ((TextView)findViewById(R.id.TextDescription)).setText(description);
+        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
     }
 }
