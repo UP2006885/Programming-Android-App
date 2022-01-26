@@ -1,11 +1,13 @@
 package MyFiles.BackendClasses;
 
 public class Node {
+    // IDs
     private int ID; // ID
     private int YesID; // YES
     private int NoID; // NO
     private int OptionalID; // MAYBE
 
+    // Strings
     private String description;
     private String question;
 
@@ -18,6 +20,9 @@ public class Node {
         this.description = description;
         this.question = question;
     }
+
+
+    public Node() {} // A second consturctor which enables us to initilize the Node class without inputing data.
 
     //Gets & Setters
     // IDs
@@ -32,11 +37,22 @@ public class Node {
 
     // Text (Strings).
     public String getDescription() {return description;}
-    public void getDescription(String description) {this.description = description;}
+    public void setDescription(String description) {this.description = description;}
     public String getQuestion() {return question;}
-    public void getQuestion(String question) {this.question = question;}
+    public void setQuestion(String question) {this.question = question;}
     // ---
 
+
+    // ToString Method.
+    @Override
+    public String toString() {
+        return "ID:" + ID +
+                ", yesID:" + YesID +
+                ", noID:" + NoID +
+                ", OptionalID:" + OptionalID +
+                ", description:'" + description + '\'' +
+                ", question:'" + question + '\'';
+    }
 
 
 }
