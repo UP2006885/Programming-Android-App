@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         InputStream in_s = getCSVRes();
         nodeMap = new NodeMap(in_s);
-        String question = nodeMap.currentNode().getQuestion();
-        String description = nodeMap.currentNode().getDescription();
 
     }
 
@@ -25,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Resources res = getResources();
         return res.openRawResource(R.raw.mycsv);
     }
+
     // Buttons
     public void yesClickHandler(View view){
 //        nodeMap.currentNode().getQuestion();
