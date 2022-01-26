@@ -20,6 +20,23 @@
             android:layout_height="wrap_content" android:id="@+id/button"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:onClick="yesClickHandler"/>
+            android:onClick="yesClickHandler" app:backgroundTint="#0BCE83"/>
+    <Button
+            android:text="Maybe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            app:backgroundTint="#F5ED00" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintVertical_bias="0.0" android:onClick="MaybeClickHandler"/>
+    <Button
+            android:text="No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button3"
+            app:backgroundTint="#EF233C" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" app:layout_constraintVertical_bias="0.0"
+            android:onClick="noClickHandler"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

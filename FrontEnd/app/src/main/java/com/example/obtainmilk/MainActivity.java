@@ -23,8 +23,16 @@ public class MainActivity extends AppCompatActivity {
         Resources res = getResources();
         return res.openRawResource(R.raw.mycsv);
     }
-
+    // Buttons
     public void yesClickHandler(View view){
         nodeMap.currentNode().getQuestion();
+    }
+
+    public void noClickHandler(View view){
+//        nodeMap.currentNode().getQuestion();
+    }
+
+    public void MaybeClickHandler(View view){
+//        nodeMap.currentNode().getQuestion();
     }
 }
