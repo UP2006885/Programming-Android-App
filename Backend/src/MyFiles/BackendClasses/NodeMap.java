@@ -15,9 +15,17 @@ public class NodeMap {
     // Switch statement for user input
     public void decision(int inputID) {
         switch (inputID) {
-            case 1 -> currentNode = currentNode.getYesNode();
-            case 2 -> currentNode = currentNode.getNoNode();
-            case 3 -> currentNode = currentNode.getOptionalNode();
+            case 1:  currentNode = currentNode.getYesNode();
+            break;
+            case 2:  currentNode = currentNode.getNoNode();
+            break;
+            case 3:
+                if(currentNode.getOptionalID() == 34){
+                System.out.println("Invalid Choice");
+                }else{
+                    currentNode = currentNode.getOptionalNode();
+                }
+                break;
         }
     }
 
