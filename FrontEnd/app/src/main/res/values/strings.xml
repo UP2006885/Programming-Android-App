@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ObtainMilk</string>
     <string name="pre_description">You wake up</string>
-    <string name="post_description">Why did you!</string>
+    <string name="post_question">Do you sleep in?</string>
+    <string name="prompt">Yes or No? (press 1 for Yes or 2 No, 3 for maybe)</string>
 </resources>

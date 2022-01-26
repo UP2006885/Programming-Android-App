@@ -10,6 +10,8 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
     NodeMap nodeMap;
+    TextView tvDescription = (TextView) findViewById(R.id.TextDescription);
+    TextView tvQuestion = (TextView) findViewById(R.id.TextQuestion);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         nodeMap = new NodeMap(in_s);
 
     }
-
     protected InputStream getCSVRes(){
         Resources res = getResources();
         return res.openRawResource(R.raw.mycsv);
@@ -27,17 +28,24 @@ public class MainActivity extends AppCompatActivity {
 
     // Buttons
     public void yesClickHandler(View view){
-//        nodeMap.currentNode().getQuestion();
-        TextView tvDescription = (TextView) findViewById(R.id.TextDescription);
-        tvDescription.setText(getResources().getString(R.string.post_description));
+        nodeMap.decision(1);
+        // Updates Text.
+        tvDescription.setText(nodeMap.currentNode().getDescription());
+        tvQuestion.setText(nodeMap.currentNode().getQuestion());
 
     }
 
     public void noClickHandler(View view){
-//        nodeMap.currentNode().getQuestion();
+        nodeMap.decision(2);
+        // Updates Text.
+        tvDescription.setText(nodeMap.currentNode().getDescription());
+        tvQuestion.setText(nodeMap.currentNode().getQuestion());
     }
 
     public void MaybeClickHandler(View view){
-//        nodeMap.currentNode().getQuestion();
+        nodeMap.decision(3);
+        // Updates Text.
+        tvDescription.setText(nodeMap.currentNode().getDescription());
+        tvQuestion.setText(nodeMap.currentNode().getQuestion());
     }
 }
