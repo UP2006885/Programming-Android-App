@@ -1,22 +1,19 @@
 package com.example.obtainmilk;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.Integer.valueOf;
 
 public class NodeCollection {
     // Array list for storing nodes.
-    private ArrayList<Node> nodes;
-    public ArrayList<Node> arrayList(){
-        return nodes;
-    }
+    private CustomArrayList<Node> nodes;
+    public CustomArrayList<Node> arrayList(){return nodes;}
 
     // Uses CSV to map nodes.
     public NodeCollection(InputStream in_s) throws FileNotFoundException {
 
         Scanner FileReference = new Scanner(in_s);
-        nodes = new ArrayList<Node>();
+        nodes = new CustomArrayList<Node>();
         Node node;
         // While theres data in CSV this loop continues, and calls mapFields to store that data in nodes.
         // These nodes are then inserted into an ArrayList.
