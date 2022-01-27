@@ -43,17 +43,7 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="158dp" android:layout_marginStart="158dp"
             app:layout_constraintHorizontal_bias="0.666" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.863" app:backgroundTint="#0BCE83"
+            app:layout_constraintVertical_bias="0.916" app:backgroundTint="#0BCE83"
             android:onClick="onStartButtonClick"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button2"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="159dp" android:layout_marginRight="159dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="158dp" android:layout_marginStart="158dp"
-            app:layout_constraintHorizontal_bias="0.666" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.934" app:backgroundTint="#0BCE83"
-            android:text="@string/bButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
