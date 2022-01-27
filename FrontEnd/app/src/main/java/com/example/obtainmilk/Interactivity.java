@@ -22,12 +22,7 @@ public class Interactivity extends AppCompatActivity {
 
         InputStream in_s = getCSVRes();
         nodeMap = new NodeMap(in_s);
-
-        System.out.println(nodeMap.currentNode().getID());
-        System.out.println(nodeMap.currentNode().getDescription());
-        System.out.println(nodeMap.currentNode().getQuestion());
-        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-        checkOption(); // Checks if the current Node if the optional node ID can be used.
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
 
     }
 
@@ -41,57 +36,44 @@ public class Interactivity extends AppCompatActivity {
     public void yesClickHandler(View view){
         nodeMap.decision(1);
         System.out.println("Button1-Yes");
-        // ------
-        String description = nodeMap.currentNode().getDescription();
-        String question = nodeMap.currentNode().getQuestion();
-        ((TextView)findViewById(R.id.TextDescription)).setText(description);
-        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
-        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-        checkOption();
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
+
     }
 
     public void noClickHandler(View view){
         nodeMap.decision(2);
         System.out.println("Button2-No");
-        // ------
-        String description = nodeMap.currentNode().getDescription();
-        String question = nodeMap.currentNode().getQuestion();
-        ((TextView)findViewById(R.id.TextDescription)).setText(description);
-        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
-        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-        checkOption();
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
     }
 
     public void MaybeClickHandler(View view){
         nodeMap.decision(3);
         System.out.println("Button3-Maybe");
         // ------
-        String description = nodeMap.currentNode().getDescription();
-        String question = nodeMap.currentNode().getQuestion();
-        ((TextView)findViewById(R.id.TextDescription)).setText(description);
-        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
-        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-        checkOption();
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
     }
 
     public void BackClickHandler(View view){
         nodeMap.decision(4);
         System.out.println("Button4-Back");
-        // ------
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
+    }
+
+    public void loadClickHandler(View view){
+
+
+
+
+        loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
+    }
+
+    public void loadDataText(){
         String description = nodeMap.currentNode().getDescription();
         String question = nodeMap.currentNode().getQuestion();
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
         checkOption();
-    }
-
-    public void loadClickHandler(View view){
-
-
-        checkOption();
-
-
     }
 
     public void checkOption(){
@@ -99,9 +81,6 @@ public class Interactivity extends AppCompatActivity {
 
         if(nodeMap.currentNode().getOptionalID() != 34){
             button.setBackgroundColor(Color.parseColor("#F5ED00"));
-        } else {
-            button.setBackgroundColor(Color.parseColor("#B5BEC6"));
-
-        }
+        } else {button.setBackgroundColor(Color.parseColor("#B5BEC6"));}
     }
 }
