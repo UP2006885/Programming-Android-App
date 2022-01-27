@@ -86,6 +86,14 @@ public class Interactivity extends AppCompatActivity {
         checkOption();
     }
 
+    public void loadClickHandler(View view){
+
+
+        checkOption();
+
+
+    }
+
     public void checkOption(){
         Button button = findViewById(R.id.button2);
 
