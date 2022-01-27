@@ -1,21 +1,18 @@
 package MyFiles.BackendClasses;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.Integer.valueOf;
 
 public class NodeCollection {
     // Array list for storing nodes.
-    private ArrayList<Node> nodes;
-    public ArrayList<Node> arrayList(){
-        return nodes;
-    }
+    private CustomArrayList<Node> nodes;
+    public CustomArrayList<Node> arrayList(){return nodes;}
 
     // Uses CSV to map nodes.
     public NodeCollection() throws FileNotFoundException {
         java.io.File file = new java.io.File("src/MyFiles/myCSV.csv");
         Scanner FileReference = new Scanner(file);
-        nodes = new ArrayList<Node>();
+        nodes = new CustomArrayList<Node>();
         Node node;
         // While theres data in CSV this loop continues, and calls mapFields to store that data in nodes.
         // These nodes are then inserted into an ArrayList.
