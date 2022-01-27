@@ -22,8 +22,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" android:id="@+id/TextQuestion"
-            android:layout_marginBottom="250dp" android:text="@string/post_question"
-            app:layout_constraintVertical_bias="0.705"/>
+            android:layout_marginBottom="305dp" android:text="@string/post_question"
+            app:layout_constraintVertical_bias="0.0" android:layout_marginTop="320dp"
+            android:layout_marginRight="45dp" android:layout_marginLeft="45dp"/>
     <Button
             android:text="@string/bButton"
             android:layout_width="wrap_content"
@@ -70,8 +71,10 @@
             android:layout_height="wrap_content" android:id="@+id/TextDescription"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="325dp" app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintVertical_bias="0.498"/>
+            android:layout_marginBottom="435dp"
+            app:layout_constraintVertical_bias="0.0" android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp" android:layout_marginRight="45dp" android:layout_marginEnd="45dp"
+            android:layout_marginTop="190dp" app:layout_constraintHorizontal_bias="0.483"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textGoBackCount"

@@ -1,8 +1,10 @@
 package com.example.obtainmilk;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,11 +27,14 @@ public class Interactivity extends AppCompatActivity {
         System.out.println(nodeMap.currentNode().getDescription());
         System.out.println(nodeMap.currentNode().getQuestion());
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+        checkOption(); // Checks if the current Node if the optional node ID can be used.
+
     }
 
     protected InputStream getCSVRes(){
         Resources res = getResources();
         return res.openRawResource(R.raw.mycsv);
+
     }
 
     // Buttons
@@ -42,9 +47,7 @@ public class Interactivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-
-
-
+        checkOption();
     }
 
     public void noClickHandler(View view){
@@ -56,8 +59,7 @@ public class Interactivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-
-
+        checkOption();
     }
 
     public void MaybeClickHandler(View view){
@@ -69,7 +71,7 @@ public class Interactivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
-
+        checkOption();
     }
 
     public void BackClickHandler(View view){
@@ -81,5 +83,17 @@ public class Interactivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
         ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+        checkOption();
+    }
+
+    public void checkOption(){
+        Button button = findViewById(R.id.button2);
+
+        if(nodeMap.currentNode().getOptionalID() != 34){
+            button.setBackgroundColor(Color.parseColor("#F5ED00"));
+        } else {
+            button.setBackgroundColor(Color.parseColor("#B5BEC6"));
+
+        }
     }
 }
