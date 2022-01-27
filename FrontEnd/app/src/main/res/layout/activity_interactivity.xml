@@ -62,8 +62,8 @@
             android:layout_height="wrap_content" android:id="@+id/button4"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:backgroundTint="#9C27B0" app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintVertical_bias="0.841" android:layout_marginLeft="10dp"
+            app:backgroundTint="#9C27B0" app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintVertical_bias="0.941" android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp" android:onClick="loadClickHandler"/>
     <Button
             android:text="@string/mButton"
@@ -104,5 +104,16 @@
             android:layout_marginRight="65dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="10dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:ems="1"
+            android:id="@+id/UserInputedNodeID"
+            android:layout_marginLeft="7dp" android:layout_marginStart="7dp"
+            app:layout_constraintStart_toEndOf="@+id/button4" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.014" app:layout_constraintVertical_bias="0.937"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

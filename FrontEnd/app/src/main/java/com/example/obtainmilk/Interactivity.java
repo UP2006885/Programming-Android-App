@@ -60,9 +60,20 @@ public class Interactivity extends AppCompatActivity {
     }
 
     public void loadClickHandler(View view){
-        int userEnteredNodeID = 7; //--- Get user Input.
-        System.out.println("Button5-load");
+        TextView input = findViewById(R.id.UserInputedNodeID);
+        String nI = input.getText().toString();
+        int userEnteredNodeID = 0; //--- Preset value incase of Error.
 
+        try{
+            int NodeInput = Integer.parseInt(nI);
+            System.out.println(NodeInput);
+            userEnteredNodeID = NodeInput;
+        }
+        catch (NumberFormatException ex){
+            System.out.println("Invalid input 'Not Int'");
+        }
+
+        System.out.println("Button5-load");
         if(nodeMap.currentNode().getID() == 0) {
             nodeMap.load(userEnteredNodeID);
             System.out.println("Button5-load-a");
