@@ -5,6 +5,9 @@ public class NodeMap {
     // Variables
     private Node head;
     private Node currentNode;
+    GoBack goBackStack = new GoBack();
+    NodeCollection nodeCollection;
+
 
     // Getters/Setters
     public Node currentNode() { return currentNode;}
@@ -15,15 +18,30 @@ public class NodeMap {
     // Switch statement for user input
     public void decision(int inputID) {
         switch (inputID) {
-            case 1:  currentNode = currentNode.getYesNode();
+            case 1:
+                goBackStack.push(currentNode.getID());
+                currentNode = currentNode.getYesNode();
+
             break;
-            case 2:  currentNode = currentNode.getNoNode();
-            break;
+            case 2:
+                goBackStack.push(currentNode.getID());
+                currentNode = currentNode.getNoNode();
+
+                break;
             case 3:
                 if(currentNode.getOptionalID() == 34){
                 System.out.println("Invalid Choice");
                 }else{
+                    goBackStack.push(currentNode.getID());
                     currentNode = currentNode.getOptionalNode();
+                }
+                break;
+
+            case 4: // Go back feature.
+                if(goBackStack.length() != 0){
+                    currentNode = nodeCollection.locateNodeBy(goBackStack.pop()); // Uses previously stored Id to get the previous node.
+                } else {
+                    System.out.println("Stack is Empty");
                 }
                 break;
         }
@@ -31,7 +49,6 @@ public class NodeMap {
 
     // Building Map
     public NodeMap()  {
-        NodeCollection nodeCollection;
         try {
             nodeCollection = new NodeCollection();
             head = nodeCollection.get(0);

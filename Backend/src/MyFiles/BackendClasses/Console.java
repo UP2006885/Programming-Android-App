@@ -14,7 +14,7 @@ public class Console {
                 endOfSim();
                 map.noDecision();
             } else { // Gets user input for next Node.
-                map.decision(getID("Yes or No? (press 1 for Yes or 2 No, 3 for maybe)"));
+                map.decision(getID("Yes or No? (press 1 for Yes or 2 No, 3 for maybe. Press 4 to go Back)"));
             }
         }
     }
