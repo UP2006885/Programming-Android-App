@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Interactivity"
-        android:background="@drawable/ic_interaction_screen_updated">
+        android:background="@drawable/ic_interaction_screen">
 
     <ImageView
             android:layout_width="wrap_content"
@@ -29,15 +29,15 @@
     />
     <Button
             android:text="@string/bButton"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button5"
-            app:backgroundTint="#673AB7" app:layout_constraintEnd_toEndOf="parent"
+            app:backgroundTint="#00b4d8" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:onClick="BackClickHandler"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.77"
-            android:layout_marginEnd="10dp" android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.767"
+            android:layout_marginEnd="58dp" android:layout_marginRight="58dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.132" android:textSize="13sp"/>
+            app:layout_constraintHorizontal_bias="0.218" android:textSize="13sp"/>
     <Button
             android:text="@string/nButton"
             android:layout_width="wrap_content"
@@ -62,9 +62,21 @@
             android:layout_height="wrap_content" android:id="@+id/button4"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:backgroundTint="#9C27B0" app:layout_constraintHorizontal_bias="0.111"
-            app:layout_constraintVertical_bias="0.859" android:layout_marginLeft="10dp"
+            app:backgroundTint="#9C27B0" app:layout_constraintHorizontal_bias="0.706"
+            app:layout_constraintVertical_bias="0.976" android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp" android:onClick="loadClickHandler" android:text="@string/lButton"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:ems="2"
+            android:id="@+id/UserInputedNodeID"
+            android:layout_marginLeft="7dp" android:layout_marginStart="7dp"
+            app:layout_constraintStart_toEndOf="@+id/button4" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.405" app:layout_constraintVertical_bias="0.976"
+            android:minWidth="48dp" android:minHeight="48dp"/>
     <Button
             android:text="@string/mButton"
             android:layout_width="wrap_content"
@@ -91,11 +103,11 @@
             android:layout_height="wrap_content" android:id="@+id/textGoBackCount"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.969"
-            android:layout_marginTop="255dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.575" android:layout_marginBottom="165dp"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginTop="450dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.624" android:layout_marginBottom="175dp"
             android:layout_marginRight="25dp" android:layout_marginEnd="25dp" android:textStyle="bold"
-            android:textSize="17sp" android:textColor="#327A85"/>
+            android:textSize="13sp" android:textColor="#327A85"/>
     <TextView
             android:text="@string/GoBackprompt"
             android:layout_width="wrap_content"
@@ -103,20 +115,8 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="125dp"
             android:layout_marginStart="125dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="65dp"
             android:layout_marginRight="65dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.276"
             app:layout_constraintVertical_bias="0.766" android:layout_marginBottom="10dp" android:textStyle="bold"
-            android:textColor="#327A85"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="1"
-            android:ems="2"
-            android:id="@+id/UserInputedNodeID"
-            android:layout_marginLeft="7dp" android:layout_marginStart="7dp"
-            app:layout_constraintStart_toEndOf="@+id/button4" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.071" app:layout_constraintVertical_bias="0.859"
-            android:minWidth="48dp" android:minHeight="48dp"/>
+            android:textColor="#327A85" android:textSize="13sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
