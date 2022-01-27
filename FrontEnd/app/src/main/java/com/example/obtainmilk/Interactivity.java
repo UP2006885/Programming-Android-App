@@ -96,16 +96,20 @@ public class Interactivity extends AppCompatActivity {
     public void checkOption(){
         Button button = findViewById(R.id.button2);
         Button button2 = findViewById(R.id.button4);
+        TextView input = findViewById(R.id.UserInputedNodeID);
 
 
         if(nodeMap.currentNode().getOptionalID() != 34){
             button.setBackgroundColor(Color.parseColor("#F5ED00"));
         } else {button.setBackgroundColor(Color.parseColor("#B5BEC6"));}
 
-
-
         if(nodeMap.currentNode().getID() == 0){
-            button2.setBackgroundColor(Color.parseColor("#9C27B0"));
-        } else {button2.setBackgroundColor(Color.parseColor("#B5BEC6"));}
+            button2.setVisibility(View.VISIBLE);
+            input.setVisibility(View.VISIBLE);
+        } else {
+            button2.setVisibility(View.INVISIBLE);
+            input.setVisibility(View.INVISIBLE);
+        }
+
     }
 }
