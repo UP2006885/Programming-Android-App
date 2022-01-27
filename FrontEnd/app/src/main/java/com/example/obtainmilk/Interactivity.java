@@ -60,8 +60,16 @@ public class Interactivity extends AppCompatActivity {
     }
 
     public void loadClickHandler(View view){
-        nodeMap.load(7);
+        int userEnteredNodeID = 7; //--- Get user Input.
         System.out.println("Button5-load");
+
+        if(nodeMap.currentNode().getID() == 0) {
+            nodeMap.load(userEnteredNodeID);
+            System.out.println("Button5-load-a");
+        } else{
+            System.out.println("Button5-load-b");
+            System.out.println("You can only load at the first node.");
+        }
         loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
     }
 
@@ -76,9 +84,17 @@ public class Interactivity extends AppCompatActivity {
 
     public void checkOption(){
         Button button = findViewById(R.id.button2);
+        Button button2 = findViewById(R.id.button4);
+
 
         if(nodeMap.currentNode().getOptionalID() != 34){
             button.setBackgroundColor(Color.parseColor("#F5ED00"));
         } else {button.setBackgroundColor(Color.parseColor("#B5BEC6"));}
+
+
+
+        if(nodeMap.currentNode().getID() == 0){
+            button2.setBackgroundColor(Color.parseColor("#9C27B0"));
+        } else {button2.setBackgroundColor(Color.parseColor("#B5BEC6"));}
     }
 }
