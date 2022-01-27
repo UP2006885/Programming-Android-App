@@ -57,6 +57,15 @@
             app:layout_constraintVertical_bias="0.644" android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"/>
     <Button
+            android:text="TEST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:backgroundTint="#9C27B0" app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintVertical_bias="0.841" android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" android:onClick="loadClickHandler"/>
+    <Button
             android:text="@string/mButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button2"
