@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(nodeMap.currentNode().getID());
         System.out.println(nodeMap.currentNode().getDescription());
         System.out.println(nodeMap.currentNode().getQuestion());
+        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+
 
     }
     protected InputStream getCSVRes(){
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         String question = nodeMap.currentNode().getQuestion();
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
+        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+
 
 
     }
@@ -49,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         String question = nodeMap.currentNode().getQuestion();
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
+        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+
 
     }
 
@@ -60,5 +66,18 @@ public class MainActivity extends AppCompatActivity {
         String question = nodeMap.currentNode().getQuestion();
         ((TextView)findViewById(R.id.TextDescription)).setText(description);
         ((TextView)findViewById(R.id.TextQuestion)).setText(question);
+        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
+
+    }
+
+    public void BackClickHandler(View view){
+        nodeMap.decision(4);
+        System.out.println("Button4-Back");
+        // ------
+        String description = nodeMap.currentNode().getDescription();
+        String question = nodeMap.currentNode().getQuestion();
+        ((TextView)findViewById(R.id.TextDescription)).setText(description);
+        ((TextView)findViewById(R.id.TextQuestion)).setText(question);
+        ((TextView)findViewById(R.id.textGoBackCount)).setText(String.valueOf(nodeMap.goBackStack.length()));
     }
 }

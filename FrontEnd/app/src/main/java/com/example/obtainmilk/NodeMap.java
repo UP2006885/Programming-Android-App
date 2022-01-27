@@ -4,6 +4,9 @@ import java.io.InputStream;
 
 public class NodeMap {
     // Variables
+    NodeCollection nodeCollection;
+    GoBack goBackStack = new GoBack();
+
     private Node head;
     private Node currentNode;
 
@@ -17,16 +20,26 @@ public class NodeMap {
     public void decision(int inputID) {
         switch (inputID){
             case 1:
+                goBackStack.push(currentNode.getID());
                 currentNode = currentNode.getYesNode();
                 break;
             case 2:
+                goBackStack.push(currentNode.getID());
                 currentNode = currentNode.getNoNode();
                 break;
             case 3:
                 if(currentNode.getOptionalID() == 34){
                     System.out.println("Invalid Choice");
                 }else{
+                    goBackStack.push(currentNode.getID());
                     currentNode = currentNode.getOptionalNode();
+                }
+                break;
+            case 4: // Go back feature.
+                if(goBackStack.length() != 0){
+                    currentNode = nodeCollection.locateNodeBy(goBackStack.pop()); // Uses previously stored Id to get the previous node.
+                } else {
+                    System.out.println("Stack is Empty");
                 }
                 break;
         }
@@ -34,7 +47,6 @@ public class NodeMap {
 
     // Building Map
     public NodeMap(InputStream in_s)  {
-        NodeCollection nodeCollection;
         try {
             nodeCollection = new NodeCollection(in_s);
             head = nodeCollection.get(0);
