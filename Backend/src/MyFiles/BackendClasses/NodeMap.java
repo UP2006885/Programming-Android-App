@@ -1,17 +1,17 @@
-package com.example.obtainmilk;
+package MyFiles.BackendClasses;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class NodeMap {
     // Variables
-    NodeCollection nodeCollection;
-    GoBack goBackStack = new GoBack();
-
     private Node head;
     private Node currentNode;
+    GoBack goBackStack = new GoBack();
+    NodeCollection nodeCollection;
     private int invalidChoiceID = 34; // The node id of all maybe nodes which arent suppose to be used.
     public int amountOFNodes;
+    Scanner input = new Scanner(System.in);
+
     // Getters/Setters
     public Node currentNode() { return currentNode;}
     public void noDecision(){
@@ -20,29 +20,37 @@ public class NodeMap {
 
     // Switch statement for user input
     public void decision(int inputID) {
-        switch (inputID){
+        switch (inputID) {
             case 1:
                 goBackStack.push(currentNode.getID());
                 currentNode = currentNode.getYesNode();
-                break;
+
+            break;
             case 2:
                 goBackStack.push(currentNode.getID());
                 currentNode = currentNode.getNoNode();
+
                 break;
             case 3:
                 if(currentNode.getOptionalID() == invalidChoiceID){
-                    System.out.println("Invalid Choice");
+                System.out.println("Invalid Choice");
                 }else{
                     goBackStack.push(currentNode.getID());
                     currentNode = currentNode.getOptionalNode();
                 }
                 break;
+
             case 4: // Go back feature.
                 if(goBackStack.length() != 0){
                     currentNode = nodeCollection.locateNodeBy(goBackStack.pop()); // Uses previously stored Id to get the previous node.
                 } else {
                     System.out.println("Stack is Empty");
                 }
+                break;
+
+            case 5: // Search feature.
+                System.out.println("Enter a nodeId between 0 - " + (amountOFNodes - 2));
+                load(input.nextInt());
                 break;
         }
     }
@@ -56,9 +64,9 @@ public class NodeMap {
     }
 
     // Building Map
-    public NodeMap(InputStream in_s)  {
+    public NodeMap()  {
         try {
-            nodeCollection = new NodeCollection(in_s);
+            nodeCollection = new NodeCollection();
             head = nodeCollection.get(0);
         } catch (FileNotFoundException e) {
             //message
