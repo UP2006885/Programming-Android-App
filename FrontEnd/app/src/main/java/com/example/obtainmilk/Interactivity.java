@@ -60,10 +60,8 @@ public class Interactivity extends AppCompatActivity {
     }
 
     public void loadClickHandler(View view){
-
-
-
-
+        nodeMap.load(7);
+        System.out.println("Button5-load");
         loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
     }
 

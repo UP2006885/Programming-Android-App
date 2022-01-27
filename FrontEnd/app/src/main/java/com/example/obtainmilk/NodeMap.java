@@ -9,7 +9,8 @@ public class NodeMap {
 
     private Node head;
     private Node currentNode;
-
+    private int invalidChoiceID = 34; // The node id of all maybe nodes which arent suppose to be used.
+    public int amountOFNodes;
     // Getters/Setters
     public Node currentNode() { return currentNode;}
     public void noDecision(){
@@ -28,7 +29,7 @@ public class NodeMap {
                 currentNode = currentNode.getNoNode();
                 break;
             case 3:
-                if(currentNode.getOptionalID() == 34){
+                if(currentNode.getOptionalID() == invalidChoiceID){
                     System.out.println("Invalid Choice");
                 }else{
                     goBackStack.push(currentNode.getID());
@@ -42,6 +43,14 @@ public class NodeMap {
                     System.out.println("Stack is Empty");
                 }
                 break;
+        }
+    }
+
+    public void load(int loadNodeID){
+        if (loadNodeID >= 0 && loadNodeID < amountOFNodes - 1){
+            currentNode = nodeCollection.locateNodeBy(loadNodeID);
+        } else {
+            System.out.println("Invalid node");
         }
     }
 
@@ -69,6 +78,7 @@ public class NodeMap {
             source.setYesNode(yesNode);
             source.setNoNode(noNode);
             source.setOptionalNode(optionalNode);
+            amountOFNodes  = amountOFNodes + 1;
         }
     }
 }
