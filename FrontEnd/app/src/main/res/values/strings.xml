@@ -2,7 +2,7 @@
     <string name="Title">Obtain the Milk</string>
     <string name="Description">Welcome to Obtain the Milk the game. This is a simplistic desision based game where you must choice you path.</string>
     <string name="sButton">Start</string>
-    <string name="bButton">Previous</string>
+    <string name="bButton">Back</string>
 
     <string name="app_name">ObtainMilk</string>
     <string name="pre_description">You wake up</string>
@@ -10,7 +10,9 @@
     <string name="yButton">Yes</string>
     <string name="nButton">No</string>
     <string name="mButton">Maybe</string>
-    <string name="GoBackprompt">Amount of undos/Go backs:</string>
+    <string name="GoBackprompt">Go backs:</string>
+    <string name="lButton">Load</string>
+
 
 
 
