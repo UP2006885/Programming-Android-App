@@ -19,14 +19,14 @@ I started by designing some Figma design frames for my splash screen, and Intera
 
 
 ## High-Quality Figma Frames
-|Splash Screen|Interaction Screen|
-|:-:|:-:|
-|![SplashScreen](Images/High/Splash.svg)|![MainInteractionScreen](Images/High/Interaction.svg)|
+|Splash Screen|Objective Page|Interaction Screen|
+|:-:|:-:|:-:|
+|![SplashScreen](Images/High/Splash.svg)|![ObjectiveScreen](Images/High/Objective.svg)|![MainInteractionScreen](Images/High/Interaction.svg)|
 
 ### Considerations
 Unfortuantly you cant just import SVGs into android studio and have them interactive, they can only be imported as backgrounds non interactive.  This meant I was required to make more simplistic frames which could be imported and used as the backgrounds for my application Empty Activitys.  
 
 #### Simplified Figma Frames
-|Splash Screen|Interaction Screen|
-|:-:|:-:|
-|![SplashScreen](Images/Low/Splash.svg)|![MainInteractionScreen](Images/Low/Interaction.svg)|
+|Splash Screen|Objective Page|Interaction Screen|
+|:-:|:-:|:-:|
+|![SplashScreen](Images/Low/Splash.svg)|![ObjectiveScreen](Images/Low/Objective.svg)|![MainInteractionScreen](Images/Low/Interaction.svg)|
