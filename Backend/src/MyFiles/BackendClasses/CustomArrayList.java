@@ -3,111 +3,68 @@ package MyFiles.BackendClasses;
 import java.util.Iterator;
 
 public class CustomArrayList<Type> implements Iterable<Type>{
-    private static final int DEFAULT_CAPACITY = 10;
+    // Variables.
+    private int arraySize; // Size
+    private Type[] objects; // Stored Objects/Nodes.
 
-    private int theSize;
-    private Type[] theItems;
-
-    public CustomArrayList() {
-        clear();
+    public CustomArrayList() { // Constructor.
+        arraySize = 0;
+        startSize(10);
     }
+    public void startSize(int newSize) { // Sets Size when called by constructor.
+        if (newSize < arraySize) return;
 
-    public void clear() {
-        theSize = 0;
-        ensureCapacity(DEFAULT_CAPACITY);
-    }
-
-    public void ensureCapacity(int newCapacity) {
-        if (newCapacity < theSize) return;
-
-        Type[] old = theItems;
-        theItems = (Type[]) new Object[newCapacity];
+        Type[] old = objects;
+        objects = (Type[]) new Object[newSize];
         for (int i = 0; i < size(); i++) {
-            theItems[i] = old[i];
+            objects[i] = old[i];
         }
     }
-
     public int size() {
-        return theSize;
-    }
-
-    public boolean isEmpty() {
-        return size() == 0;
-    }
-
-    public void trimToSize() {
-        ensureCapacity(size());
-    }
+        return arraySize;
+    } // Returns amt of Nodes.
 
     public Type get(int index) {
         if (index < 0 || index >= size()) throw new ArrayIndexOutOfBoundsException();
 
-        return theItems[index];
+        return objects[index];
     }
-
-    public Type set(int index, Type newVal) {
-        if (index < 0 || index >= size()) throw new ArrayIndexOutOfBoundsException();
-        Type old = theItems[index];
-        theItems[index] = newVal;
-        return old;
-    }
-
-    //    /**
-//     * add the element to the end of list
-//     *
-//     * @param element is the element you want to add
-//     * @return true if add successfully, otherwise return false
-//     */
     public boolean add(Type element) {
         add(size(), element);
         return true;
     }
-
-    //    /**
-//     * add the element to the specific position
-//     *
-//     * @param index is the position you want to insert the element
-//     * @param element     is the element you want to insert
-//     */
     public void add(int index, Type element) {
-        if (theItems.length == size()) ensureCapacity(size() * 2 + 1);
-        for (int i = theSize; i > index; i--) {
-            theItems[i] = theItems[i - 1];
+        if (objects.length == size()) startSize(size() * 2 + 1);
+        for (int i = arraySize; i > index; i--) {
+            objects[i] = objects[i - 1];
         }
-        theItems[index] = element;
-        theSize++;
+        objects[index] = element;
+        arraySize++;
     }
-
     public Type remove(int index) {
-        Type removeItem = theItems[index];
+        Type removeItem = objects[index];
         for (int i = index; i < size() - 1; i++) {
-            theItems[i] = theItems[i + 1];
+            objects[i] = objects[i + 1];
         }
-        theSize--;
+        arraySize--;
         return removeItem;
     }
-
 
     public Iterator<Type> iterator() {
         return new ArrayListIterator();
     }
-
-    // inner class
+    // Inner
     private class ArrayListIterator implements java.util.Iterator<Type> {
-
         private int current = 0;
-
         public boolean hasNext() {
             return current < size();
         }
-
         public Type next() {
             if (!hasNext()) throw new java.util.NoSuchElementException();
-            return theItems[current++];
+            return objects[current++];
         }
-
         public void remove() {
-            CustomArrayList.this.remove(--current); // reference the outer class
+            CustomArrayList.this.remove(--current);
         }
     }
 }
