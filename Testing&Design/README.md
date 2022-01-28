@@ -40,7 +40,7 @@ Test ID|Test Description|Test Data|Expected Result|Actual Results|
 Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |:-|----|--|--|--|
 |14|What happens if the user tries to use option “4” (Go back to the previous node), when the program starts and there are no previous choices.|Int: 4|The program should output an empty msg.|The program outs a msg stating the Stack (ADT used for storing previously accessed nodes) is currently empty, it then requests the user re-enter a choice.|
-|15|What happens if the user tries to use option “4” (Go back to the previous node), after a win or loss, when the program resets them to position 0.|Int: 2, 1, 2,2, 1, 4|The user should be able to go back to the previous steps even if they are win/loss msgs.|
+|15|What happens if the user tries to use option “4” (Go back to the previous node), after a win or loss, when the program resets them to position 0.|Int: 2, 1, 2,2, 1, 4|The user should be able to go back to the previous steps even if they are win/loss msgs.|The user is sent back to the previous node.|
 |16|What happens if the user loads a node and then uses the Previous node function?|Int: 4|The user should be sent back to the previous node they interacted with, not the previous node before the node they loaded.|The Program doesnt go back and instead outputs a stack empty msg, this is likely due to the fact the stack is only updated after the first node choice, Node 0 is not added to the stack apon initilisation of the program|
 |17|What happens if the user loads a node and then uses the Previous node function?|Int: 2, 4|The user should be sent back to the previous node they interacted with, not the previous node before the node they loaded.|The user is sent back to the previous node.|
 
@@ -50,7 +50,7 @@ Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |:-|----|--|--|--|
 |18|What happens if the user tries to load position 17.|Int: 5, 17|The program should set the user's node to NodeID 17 and display the correct Description/Question.|The program runs the function and loads the correct node.|
 |19|What happens if the user tries to load node -1. (Out of bounds)|Int: 5, -1|The program should output an error msg and ask the user to input another choice.|The program outputs an error msg stating the node is invalid and asks the user to re-enter a choice (Not for loading nodes but for chosing a function/choice).|
-|20|What happens if the user tries to load node 72. (Out of bounds)| Int: 5, 72| The program should output an error msg and ask the user to input another choice.||
+|20|What happens if the user tries to load node 72. (Out of bounds)| Int: 5, 72| The program should output an error msg and ask the user to input another choice.|The program outputs an error msg stating the node is invalid and asks the user to re-enter a choice (Not for loading nodes but for chosing a function/choice).|
 
 ### Testing Evidence
 
