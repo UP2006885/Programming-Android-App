@@ -8,8 +8,11 @@
         <entry key="app/src/main/res/drawable/ic_interaction_screen_updated.xml" value="0.31197916666666664" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.31197916666666664" />
         <entry key="app/src/main/res/drawable/ic_objective.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/drawable/ic_objective_updated.xml" value="0.31197916666666664" />
         <entry key="app/src/main/res/drawable/ic_splash.xml" value="0.296875" />
-        <entry key="app/src/main/res/layout/activity_interactivity.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_updated_interaction.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/drawable/ic_updated_interaction_wo_load.xml" value="0.31197916666666664" />
+        <entry key="app/src/main/res/layout/activity_interactivity.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_objective.xml" value="0.335" />
       </map>

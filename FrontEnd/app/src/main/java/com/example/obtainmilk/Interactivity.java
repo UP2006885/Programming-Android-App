@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.io.InputStream;
 
@@ -82,6 +83,7 @@ public class Interactivity extends AppCompatActivity {
             System.out.println("You can only load at the first node.");
         }
         loadDataText(); // Loads the Description, Question & Stack length to activity. and runs Check option which updates the maybe button dependant on choices available.
+
     }
 
     public void loadDataText(){
@@ -94,6 +96,7 @@ public class Interactivity extends AppCompatActivity {
     }
 
     public void checkOption(){
+        ConstraintLayout layout = (ConstraintLayout) findViewById(R.id.test);
         Button button = findViewById(R.id.button2);
         Button button2 = findViewById(R.id.button4);
         TextView input = findViewById(R.id.UserInputedNodeID);
@@ -104,9 +107,11 @@ public class Interactivity extends AppCompatActivity {
         } else {button.setBackgroundColor(Color.parseColor("#B5BEC6"));}
 
         if(nodeMap.currentNode().getID() == 0){
+            layout.setBackgroundResource(R.drawable.ic_updated_interaction);
             button2.setVisibility(View.VISIBLE);
             input.setVisibility(View.VISIBLE);
         } else {
+            layout.setBackgroundResource(R.drawable.ic_updated_interaction_wo_load);
             button2.setVisibility(View.INVISIBLE);
             input.setVisibility(View.INVISIBLE);
         }
