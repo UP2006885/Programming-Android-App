@@ -24,4 +24,9 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(MainActivity.this, Interactivity.class);
         startActivity(myIntent);
     }
+
+    public void onObjectiveButtonClick(View view){
+        Intent myIntent = new Intent(MainActivity.this, Objective.class);
+        startActivity(myIntent);
+    }
 }

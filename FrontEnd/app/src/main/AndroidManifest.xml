@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ObtainMilk">
         <activity
+                android:name=".Objective"
+                android:exported="true"/>
+        <activity
                 android:name=".Interactivity"
                 android:exported="true"/>
         <activity

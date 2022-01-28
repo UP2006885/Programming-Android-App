@@ -36,14 +36,24 @@
             android:text="@string/Description"/>
     <Button
             android:text="@string/sButton"
-            android:layout_width="109dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content" android:id="@+id/button"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="159dp" android:layout_marginRight="159dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="158dp" android:layout_marginStart="158dp"
             app:layout_constraintHorizontal_bias="0.666" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.916" app:backgroundTint="#0BCE83"
+            app:layout_constraintVertical_bias="0.869" app:backgroundTint="#0BCE83"
             android:onClick="onStartButtonClick"/>
+    <Button
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" android:id="@+id/button6"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="159dp" android:layout_marginRight="159dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="158dp" android:layout_marginStart="158dp"
+            app:layout_constraintHorizontal_bias="0.645" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.939" app:backgroundTint="#0BCE83"
+            android:onClick="onObjectiveButtonClick" android:text="@string/oButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
