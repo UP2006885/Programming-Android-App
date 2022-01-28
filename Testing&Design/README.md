@@ -15,7 +15,7 @@ Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |4|What happens if the user tries to input a Boolean?|Boolean: TRUE|The program asks the user to re-input a choice.|The program crashes due to the unexpected data type.|
 |5|What happens if the user tries to continuously input enter as the choice?|Input: (Enter 10 times), Int: 2.|The program asks the user to re-input a choice.|The program waits for the user to input a valid input without outputting any error msgs or resending a msg.|
 
-### Other Tests
+### Misc Tests
 
 Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |:-|----|--|--|--|
@@ -33,7 +33,9 @@ Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |12|Can you navigate to node 18 (WIN) by going directly to Archey?|Int: 2, 2, 1, 1|It should be possible to win the application by following this path.|The Program allows the user to follow this path and the result is that a win msg is outputted once the user reaches the winning node.|
 |13|Can you navigate to node 10 (WIN)?|Int: 2, 1, 2,2, 1|It should be possible to win the application by following this path.|The Program allows the user to follow this path and the result is that a win msg is outputted once the user reaches the winning node.|
 
-### Custom Tests - tests for features I added.
+### Custom Features Tests
+
+### Previous Nodes / Go back feature
 
 Test ID|Test Description|Test Data|Expected Result|Actual Results|
 |:-|----|--|--|--|
